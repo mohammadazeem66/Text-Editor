@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-color: rgb(154, 150, 150);
+       
+      }
+
+ .main{
+
+    border: 1px black solid;
+    height: 500px;
+    border-style: none;
+    margin-top: 200px;
+    
+}
+.txtarea{
+    border: 1px red solid;
+    height: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-style: none;
+}
+.btns{
+    border: 1px blue solid;
+    height: 100px;
+    text-align: center;
+    /* margin-top: 20px; */
+    padding: 15px;
+    border-style: none;
+   
+}
+#clearbtn{
+  padding: 5px;
+  width: 50px;
+  background-color: rgb(203, 200, 200);
+  border-radius: 5px;
+}
+
+#bldbtn{
+  padding: 5px;
+  width: 50px;
+  background-color: rgb(203, 200, 200);
+  border-radius: 5px;
+}
+
+#itlcbtn{
+  padding: 5px;
+  width: 50px;
+  background-color: rgb(203, 200, 200);
+  border-radius: 5px;
+}
+#linebtn{
+  padding: 5px;
+  width: 80px;
+  background-color: rgb(203, 200, 200);
+  border-radius: 5px;
+}
+#textlength{
+  padding: 5px;
+  width: 100px;
+  background-color: rgb(203, 200, 200);
+  border-radius: 5px;
+}
+
+
+
+    </style>
+
+
+</head>
+<body>
+    
+<div class="main">
+    <div class="txtarea">
+    <textarea name="" id="txt" cols="30" rows="10" placeholder="Text here.."></textarea>
+    </div>
+    <div class="btns">
+     <button id="clearbtn" onclick="clr()"> Clear </button> 
+     <button id="bldbtn" onclick="bld()">Bold</button> 
+     <button id="itlcbtn" onclick="itl()">Italiq</button> 
+     <button id="linebtn" onclick="unlne()">Underline</button> 
+     <button id="textlength" onclick="lnth()">Text length</button> 
+    </div>
+
+</div>
+
+
+
+<script>
+
+function clr(){
+var a = document.getElementById("txt")
+  a.value=" "
+}
+
+function bld(){
+  var b = document.getElementById("txt")
+  b.style.fontWeight="bold"
+}
+function itl(){
+  var c = document.getElementById("txt")
+  c.style.fontStyle="italic"
+}
+
+function unlne(){
+  var d = document.getElementById("txt")
+  d.style.textDecoration="underline";
+}
+function lnth(){
+  var e = document.getElementById("txt").value
+ var e1=e.split("")
+ var e2=e1.length
+ alert("text length is " + e2)
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
